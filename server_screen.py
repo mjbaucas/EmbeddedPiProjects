@@ -36,26 +36,26 @@ draw = ImageDraw.Draw(image)
 def write_to_screen(text):
     # Clear screen
     display.fill(0)
-	display.show()
+    display.show()
 
     draw.rectangle((0, 0, display.width, display.height), outline=255, fill=255)
 
-	draw.rectangle(
-		(BORDER, BORDER, display.width - BORDER - 1, display.height - BORDER - 1),
-		outline = 0,
-		fill = 0,
-	)
-	
-	(_, _, font_width, font_height) = font.getbbox(text)
-	draw.text(
-		(display.width // 2 - font_width // 2, display.height // 2 - font_height // 2),
-		text,
-		font = font,
-		fill = 255,
-	)
+    draw.rectangle(
+        (BORDER, BORDER, display.width - BORDER - 1, display.height - BORDER - 1),
+        outline = 0,
+        fill = 0,
+    )
 
-	display.image(image)
-	display.show()
+    (_, _, font_width, font_height) = font.getbbox(text)
+    draw.text(
+        (display.width // 2 - font_width // 2, display.height // 2 - font_height // 2),
+        text,
+        font = font,
+        fill = 255,
+    )
+
+    display.image(image)
+    display.show()
 
 
 ip_addresses = [
