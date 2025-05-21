@@ -66,7 +66,8 @@ ip_addresses = [
 
 counter = 0
 while True:
-    s = sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind(("", 5000))
     s.listen(10)
     print('Server is now running.')
