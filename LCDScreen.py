@@ -30,8 +30,6 @@ image = Image.new("1", (display.width, display.height))
 
 draw = ImageDraw.Draw(image)
 
-
-
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", FONTSIZE)
 
 for i in range(0,10):

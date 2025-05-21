@@ -33,6 +33,8 @@ image = Image.new("1", (display.width, display.height))
 
 draw = ImageDraw.Draw(image)
 
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", FONTSIZE)
+
 def write_to_screen(text):
     # Clear screen
     display.fill(0)
