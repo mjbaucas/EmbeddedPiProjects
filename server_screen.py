@@ -79,6 +79,7 @@ while True:
         #print(message)
         write_to_screen(message.decode("utf-8"))
         connection.sendall(bytes("Message recieved", "utf-8"))
+        time.sleep(3)
         counter+=1
         if counter >= len(ip_addresses):
             counter = 0
