@@ -16,7 +16,7 @@ while True:
             id, text = reader.read()
             print(id)
             print(text)
-            s.sendall(bytes(id, "utf-8"))
+            s.sendall(bytes(str(id), "utf-8"))
             message = s.recv(1024).decode("utf-8")
         finally:
             GPIO.cleanup()
