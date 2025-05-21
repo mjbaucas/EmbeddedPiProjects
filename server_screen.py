@@ -75,7 +75,7 @@ while True:
     if address[0] == ip_addresses[counter]:
         print(f"Connection from {address} has been established.")
         message = connection.recv(1024)
-        print(message)
+        #print(message)
         write_to_screen(message.decode("utf-8"))
         connection.sendall(bytes("Message recieved", "utf-8"))
         counter+=1
@@ -85,5 +85,5 @@ while True:
         connection.recv(1024)
         connection.sendall(bytes("", "utf-8"))
         
-    print(counter)
+    #print(counter)
     connection.close()
