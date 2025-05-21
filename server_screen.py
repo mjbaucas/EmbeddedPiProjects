@@ -66,6 +66,7 @@ ip_addresses = [
 
 counter = 0
 while True:
+    write_to_screen("Waiting...")
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind(("", 5000))
