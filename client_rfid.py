@@ -10,7 +10,7 @@ message = ""
 while True:
 	try:
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		s.connect(("10.12.202.68", 5000))
+		s.connect(("10.12.240.116", 5000))
 		
 		try:
 			id, text = reader.read()
